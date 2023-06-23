@@ -1,0 +1,18 @@
+.stylee {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+}
+
+.card {
+    text-align: center;
+
+    .btns {
+        display: inline-flex;
+        gap: 10px;
+    }
+}
+
+.font {
+    font-family: "Sofia";
+}

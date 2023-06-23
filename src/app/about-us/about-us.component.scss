@@ -1,0 +1,44 @@
+.about {
+    margin-bottom: 50px;
+}
+p {
+    font-size: larger;
+}
+
+.font {
+    font-family: "Sofia";
+}
+
+.images {
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    
+    img {
+        width: 450px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .images {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      gap: 20px;
+    }
+}
+

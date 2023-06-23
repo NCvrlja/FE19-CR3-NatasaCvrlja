@@ -1,0 +1,22 @@
+<h1 class="text-center mt-1 font">Our specialities</h1>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-3 mt-2">
+    <div  *ngFor="let food of foods; index as i">
+        <div class="card" style="width: 18rem;">
+            <h5 class="card-header font">{{food.name}}</h5>
+            <img src="{{food.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">{{food.shortabout}}</p>
+                <p class="card-text">{{food.price}}€</p>
+                <hr>
+                <div class="btns" *ngIf="food.avaiable; else elseback">
+                    <button class="btn btn-primary" routerLink="/details/{{i}}">Details</button>
+                    <button class="btn btn-success" (click)="addToCart(food)">Order</button>
+                </div>
+                <ng-template #elseback>
+                    <p>The food is not avaiable</p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

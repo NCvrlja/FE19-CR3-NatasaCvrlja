@@ -1,0 +1,41 @@
+<h2 class="font">Your orders</h2>
+<div class="summary">
+    <div> Ordered: {{this.total }} €</div>
+    <div> Service fee: 10%</div>
+    <div *ngIf="this.discount">You got a discount of 15%</div>
+    <div> Total amount: {{this.tamount }} €</div>
+</div>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 g-3 mt-2">
+    <div  *ngFor="let item of order">
+        <div class="card" style="width: 18rem">
+            <h5 class="card-header font">{{item.name}}</h5>
+            <img src="{{item.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">{{item.ingredients}}</p>
+                <h5 class="card-text">{{item.price}}€</h5>
+                <hr>
+                <div class="btns">
+                    <button class="btn btn-success" (click)="removeItem()">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="form">
+    <h2 class="font">Order Form</h2>
+    <p>Please fill up the info for your delivery</p>
+    <hr>
+    <form [formGroup]="orderform" (ngSubmit)="onSubmit()">
+        <label for="name">Name: </label>
+        <br>
+        <input type="text" formControlName="name" id="name">
+        <br>
+        <label for="address">Address: </label>
+        <br>
+        <input type="text" formControlName="address" id="address">
+        <br>
+        <button class="btn btn-primary">Purchase</button>
+    </form>
+</div>

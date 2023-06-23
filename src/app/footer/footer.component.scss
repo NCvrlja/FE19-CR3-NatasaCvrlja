@@ -1,0 +1,19 @@
+
+.footer {
+    background:#232334;
+	padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	color: white;
+
+	.footer_copyright{
+		font-family: sans-serif;
+	}
+
+	.list {
+		display: inline-flex;
+		gap: 5px;
+	}
+}
+

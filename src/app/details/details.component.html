@@ -1,0 +1,20 @@
+<h1 class="text-center mt-1 font">Our specialities</h1>
+
+<div class="row">
+    <div  *ngIf="food">
+        <div class="card" style="width: 50%">
+            <h4 class="card-header font">{{food.name}}</h4>
+            <img src="{{food.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text font">{{food.shortabout}}</p>
+                <p class="card-text">{{food.about}} </p>
+                <h5 class="card-text">{{food.price}}€</h5>
+                <hr>
+                <div class="btns">
+                    <button class="btn btn-primary" routerLink="/menu">Back</button>
+                    <button class="btn btn-success" (click)="addToCart()">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

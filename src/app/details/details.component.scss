@@ -1,0 +1,12 @@
+.font {
+    font-family: "Sofia";
+}
+
+.card {
+    text-align: center;
+
+    .btns {
+        display: inline-flex;
+        gap: 10px;
+    }
+}
