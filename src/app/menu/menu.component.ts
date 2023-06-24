@@ -14,8 +14,8 @@ export class MenuComponent implements OnInit {
 
   constructor(private cartService: CartService){}
 
-  addToCart(food: iarrays){
-    this.cartService.addToCart(food);
+  addToCart(obj: iarrays){
+    this.cartService.addToCart(obj);
     alert("Added to your orders")
   }
   ngOnInit(): void {
